@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>رسالة السلام</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      letter-spacing: 0.05em;
+      opacity: 0;
+      animation: fadeDown 0.8s ease forwards 0.2s;
+    }
+
+    .face-wrapper {
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.5s;
+    }
+
+    .face {
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle at 40% 35%, #ffe066, #f4c430);
+      border-radius: 50%;
+      position: relative;
+      box-shadow: 0 0 40px rgba(244, 196, 48, 0.4), 0 8px 32px rgba(0,0,0,0.4);
+      animation: pulse 3s ease-in-out infinite 1.3s;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .face:hover {
+      transform: scale(1.05);
+    }
+
+    .eyes {
+      display: flex;
+      justify-content: space-around;
+      padding: 52px 44px 0;
+    }
+
+    .eye {
+      width: 26px;
+      height: 26px;
+      background: #333;
+      border-radius: 50%;
+      position: relative;
+      animation: blink 4s ease-in-out infinite 2s;
+    }
+
+    .eye::after {
+      content: '';
+      position: absolute;
+      top: 4px;
+      left: 6px;
+      width: 8px;
+      height: 8px;
+      background: #fff;
+      border-radius: 50%;
+    }
+
+    .mouth {
+      width: 100px;
+      height: 50px;
+      border: 6px solid #333;
+      border-top: none;
+      border-radius: 0 0 60px 60px;
+      margin: 18px auto 0;
+    }
+
+    .cheek {
+      position: absolute;
+      width: 34px;
+      height: 20px;
+      background: rgba(255, 120, 120, 0.45);
+      border-radius: 50%;
+      top: 108px;
+    }
+
+    .cheek.left  { left: 20px; }
+    .cheek.right { right: 20px; }
+
+    .status {
+      margin-top: 2.5rem;
+      font-size: 1.1rem;
+      color: #a0c4ff;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.9s;
+    }
+
+    .dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background: #4ade80;
+      border-radius: 50%;
+      margin-right: 8px;
+      box-shadow: 0 0 8px #4ade80;
+      animation: glow 1.5s ease-in-out infinite;
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 40px rgba(244,196,48,0.4), 0 8px 32px rgba(0,0,0,0.4); }
+      50%       { box-shadow: 0 0 70px rgba(244,196,48,0.7), 0 8px 32px rgba(0,0,0,0.4); }
+    }
+
+    @keyframes blink {
+      0%, 90%, 100% { transform: scaleY(1); }
+      95%           { transform: scaleY(0.1); }
+    }
+
+    @keyframes glow {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.4; }
+    }
+  </style>
+</head>
+<body>
+  <h1 class="title">رسالة السلام ✌️</h1>
+
+  <div class="face-wrapper">
+    <div class="face">
+      <div class="cheek left"></div>
+      <div class="cheek right"></div>
+      <div class="eyes">
+        <div class="eye"></div>
+        <div class="eye"></div>
+      </div>
+      <div class="mouth"></div>
+    </div>
+  </div>
+
+  <p class="status"><span class="dot"></span>All connections working</p>
+</body>
+</html>
