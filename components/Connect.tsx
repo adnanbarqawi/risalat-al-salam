@@ -44,9 +44,9 @@ export default function Connect() {
           className="w-full rounded-2xl overflow-hidden mt-4"
           style={{ border: "1px solid rgba(200,164,93,0.25)", minHeight: 550 }}
         >
-          {/* Cal.com inline embed — replace YOUR_CAL_USERNAME with your actual Cal.com username */}
+          {/* Cal.com inline embed — replace adnanbarqawi with your actual Cal.com username */}
           <iframe
-            src="https://cal.com/YOUR_CAL_USERNAME?embed=true&theme=light"
+            src="https://cal.com/adnanbarqawi?embed=true&theme=light"
             width="100%"
             height="580"
             frameBorder="0"
@@ -57,7 +57,7 @@ export default function Connect() {
 
         {/* Fallback button */}
         <a
-          href="https://cal.com/YOUR_CAL_USERNAME"
+          href="https://cal.com/adnanbarqawi"
           target="_blank"
           rel="noopener noreferrer"
           className="font-ui text-sm px-8 py-3 rounded-full transition-all duration-300 inline-block"
