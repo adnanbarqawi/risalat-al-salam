@@ -1,5 +1,7 @@
 "use client";
 
+import Script from "next/script";
+
 export default function Connect() {
   return (
     <section
@@ -39,21 +41,28 @@ export default function Connect() {
           spiritual path.
         </p>
 
-        {/* Cal.com embed */}
+        {/* Cal.com inline embed */}
         <div
+          id="my-cal-inline"
           className="w-full rounded-2xl overflow-hidden mt-4"
           style={{ border: "1px solid rgba(200,164,93,0.25)", minHeight: 550 }}
-        >
-          {/* Cal.com inline embed — replace adnanbarqawi with your actual Cal.com username */}
-          <iframe
-            src="https://cal.com/adnanbarqawi?embed=true&theme=light"
-            width="100%"
-            height="580"
-            frameBorder="0"
-            title="Book a session"
-            style={{ display: "block" }}
-          />
-        </div>
+        />
+
+        <Script id="cal-embed">{`
+          (function(C,A,L){
+            let p=function(a,ar){a.q.push(ar)};
+            let d=C.document;
+            C.Cal=C.Cal||function(){
+              let cal=C.Cal;let ar=arguments;
+              if(!cal.loaded){cal.ns={};cal.q=cal.q||[];d.head.appendChild(d.createElement("script")).src=A;cal.loaded=true}
+              if(ar[0]===L){const api=function(){p(api,arguments)};const namespace=ar[1];api.q=api.q||[];typeof namespace==="string"?(cal.ns[namespace]=api)&&p(api,ar):p(cal,ar);return}
+              p(cal,ar);
+            };
+          })(window,"https://app.cal.com/embed/embed.js","init");
+          Cal("init",{origin:"https://cal.com"});
+          Cal("inline",{elementOrSelector:"#my-cal-inline",calLink:"adnanbarqawi",layout:"month_view"});
+          Cal("ui",{"theme":"light","hideEventTypeDetails":false,"layout":"month_view"});
+        `}</Script>
 
         {/* Fallback button */}
         <a

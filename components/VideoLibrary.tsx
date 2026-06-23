@@ -112,13 +112,40 @@ export default function VideoLibrary({ videos }: { videos: Video[] }) {
 
         {/* Grid */}
         {filtered.length === 0 ? (
-          <div
-            className="py-20 text-center font-display italic text-lg"
-            style={{ color: "rgba(232,221,199,0.4)" }}
-          >
-            {videos.length === 0
-              ? "Videos will appear here once they are uploaded."
-              : "No videos match your search."}
+          <div className="py-20 text-center flex flex-col items-center gap-4">
+            {videos.length === 0 ? (
+              <>
+                <span
+                  className="font-ui text-xs tracking-[0.25em] uppercase px-4 py-1.5 rounded-full"
+                  style={{
+                    background: "rgba(200,164,93,0.12)",
+                    color: "var(--gold)",
+                    border: "1px solid rgba(200,164,93,0.3)",
+                  }}
+                >
+                  In Progress
+                </span>
+                <p
+                  className="font-display italic text-xl"
+                  style={{ color: "rgba(232,221,199,0.75)" }}
+                >
+                  Videos are on their way.
+                </p>
+                <p
+                  className="font-ui text-sm max-w-xs"
+                  style={{ color: "rgba(232,221,199,0.4)" }}
+                >
+                  Stay tuned — teachings and reflections will be uploaded here soon.
+                </p>
+              </>
+            ) : (
+              <p
+                className="font-display italic text-lg"
+                style={{ color: "rgba(232,221,199,0.4)" }}
+              >
+                No videos match your search.
+              </p>
+            )}
           </div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
