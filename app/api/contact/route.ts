@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
-import { supabaseAdmin } from "@/lib/supabase";
+import { supabase } from "@/lib/supabase";
 
 const schema = z.object({
   name:    z.string().min(2).max(100),
@@ -36,8 +36,7 @@ export async function POST(req: NextRequest) {
 
   const { name, email, message } = parsed.data;
 
-  const admin = supabaseAdmin();
-  const { error } = await admin.from("contact_submissions").insert({
+  const { error } = await supabase.from("contact_submissions").insert({
     name,
     email,
     message,
