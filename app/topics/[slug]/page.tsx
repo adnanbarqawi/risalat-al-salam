@@ -8,6 +8,7 @@ const topicData: Record<
   string,
   {
     arabic: string;
+    transliteration: string;
     english: string;
     subtitle: string;
     intro: string;
@@ -15,12 +16,13 @@ const topicData: Record<
   }
 > = {
   "meaning-of-peace": {
-    arabic: "مَعْنَى السَّلَامِ",
-    english: "Meaning of Peace",
+    arabic: "السَّلَام",
+    transliteration: "As-Salām",
+    english: "The Meaning of Peace",
     subtitle:
       "Peace is not merely the absence of conflict — it is a profound state of wholeness, harmony, and alignment with the Divine.",
     intro:
-      "The Arabic word 'السَّلَام' (Al-Salam) is one of the 99 Names of God — Al-Salam, the Source of Peace. Peace is not an external condition to be achieved; it is an inner reality to be uncovered. This section is a growing resource of teachings, reflections, and insights on the nature of peace.",
+      "The Arabic word 'السَّلَام' (As-Salām) is one of the 99 Names of God — As-Salām, the Source of Peace. Peace is not an external condition to be achieved; it is an inner reality to be uncovered. This section is a growing resource of teachings, reflections, and insights on the nature of peace.",
     reflections: [
       "True peace begins within — when the heart finds rest in the remembrance of God.",
       "Peace is the natural state of the soul when it is aligned with its purpose.",
@@ -28,25 +30,27 @@ const topicData: Record<
     ],
   },
   "meaning-of-forgiveness": {
-    arabic: "مَعْنَى الْمَغْفِرَةِ",
-    english: "Meaning of Forgiveness",
+    arabic: "التَّسَامُح",
+    transliteration: "At-Tasāmuḥ",
+    english: "Forgiveness",
     subtitle:
-      "Forgiveness is one of the greatest acts of courage. It liberates the soul and opens the heart to healing and renewal.",
+      "Forgiveness is one of the most courageous acts of the human spirit — the choice to release resentment, restore peace within, and open the heart to healing and renewal.",
     intro:
-      "In Arabic, 'المَغْفِرَة' (Al-Maghfira) speaks to a covering and protection — God's forgiveness wraps the soul in mercy. Forgiving others is not condoning harm; it is releasing the weight that no longer serves you. This section will grow with teachings, stories, and practices on the transformative power of forgiveness.",
+      "The Arabic التَّسَامُح (At-Tasāmuḥ) evokes a spirit of generous release — the expansive willingness to let go of what no longer serves the soul and extend grace to others and to oneself. True forgiveness is not a sign of weakness; it is an act of profound inner strength. It does not require forgetting what happened, nor does it mean accepting harm. It means choosing freedom over resentment, peace over bitterness, and love over fear. When we forgive, we reclaim our own wholeness. This section is a growing sanctuary of teachings and reflections on this transformative practice.",
     reflections: [
-      "Forgiveness is a gift you give yourself before it is a gift you give another.",
-      "The capacity to forgive is a reflection of how deeply we have received forgiveness ourselves.",
-      "Every act of genuine forgiveness is an act of healing for the entire world.",
+      "Forgiveness is a gift you give to yourself — it releases the weight that was never truly yours to carry.",
+      "When we let go of resentment, we create space for something greater: peace, clarity, and the freedom to grow.",
+      "The most enduring acts of healing in human history have begun not with retaliation, but with the quiet, courageous decision to forgive.",
     ],
   },
   "meaning-of-love": {
-    arabic: "مَعْنَى الْمَحَبَّةِ",
-    english: "Meaning of Love",
+    arabic: "الْمَحَبَّة",
+    transliteration: "Al-Maḥabbah",
+    english: "The Meaning of Love",
     subtitle:
       "Love is the original language of the soul — the force that connects all of creation back to its source.",
     intro:
-      "The Arabic root 'حُبّ' (Hubb) speaks to a seed buried in the heart that, when nurtured, grows into the greatest force in existence. Divine love — المَحَبَّة الإلهية — is the foundation of all creation. This section will be a sanctuary for exploring love in its highest, most expansive form.",
+      "The Arabic root 'حُبٌّ' (Ḥubb) speaks to a seed buried in the heart that, when nurtured, grows into the greatest force in existence. Divine love — الْمَحَبَّةُ الإِلَهِيَّة — is the foundation of all creation. This section will be a sanctuary for exploring love in its highest, most expansive form.",
     reflections: [
       "To love is to recognize the Divine in another — to see God's reflection in every soul.",
       "Love without boundaries is not attachment; it is the closest we come to Divine nature.",
@@ -62,7 +66,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const topic = topicData[slug];
   if (!topic) return {};
   return {
-    title: `${topic.english} | رسالة السلام`,
+    title: `${topic.english} | رِسَالَةُ السَّلَامِ`,
     description: topic.subtitle,
   };
 }
@@ -84,7 +88,7 @@ export default async function TopicPage({ params }: Props) {
               "linear-gradient(160deg, var(--green) 0%, #0D2B1E 100%)",
           }}
         >
-          <div className="max-w-3xl mx-auto flex flex-col items-center gap-6">
+          <div className="max-w-3xl mx-auto flex flex-col items-center gap-4">
             <Link
               href="/#topics"
               className="font-ui text-xs tracking-widest uppercase transition-colors"
@@ -93,11 +97,17 @@ export default async function TopicPage({ params }: Props) {
               ← Back to Topics
             </Link>
             <h1
-              className="font-arabic text-5xl md:text-6xl"
+              className="font-arabic text-5xl md:text-6xl mt-2"
               style={{ color: "var(--ivory)" }}
             >
               {topic.arabic}
             </h1>
+            <p
+              className="transliteration text-lg md:text-xl"
+              style={{ color: "rgba(200,164,93,0.9)" }}
+            >
+              {topic.transliteration}
+            </p>
             <p
               className="font-display text-xl md:text-2xl tracking-wide"
               style={{ color: "var(--gold)" }}
@@ -106,8 +116,8 @@ export default async function TopicPage({ params }: Props) {
             </p>
             <div className="divider-gold" />
             <p
-              className="font-display italic text-base md:text-lg max-w-xl"
-              style={{ color: "rgba(232,221,199,0.75)" }}
+              className="font-display italic text-lg md:text-xl max-w-xl"
+              style={{ color: "rgba(232,221,199,0.88)" }}
             >
               {topic.subtitle}
             </p>
@@ -117,7 +127,7 @@ export default async function TopicPage({ params }: Props) {
         {/* Intro */}
         <section className="py-16 px-6 max-w-3xl mx-auto">
           <p
-            className="font-display text-lg md:text-xl leading-loose text-center"
+            className="font-display text-xl md:text-2xl leading-loose text-center"
             style={{ color: "var(--text)" }}
           >
             {topic.intro}
@@ -144,7 +154,7 @@ export default async function TopicPage({ params }: Props) {
                   style={{ borderLeft: "3px solid var(--gold)" }}
                 >
                   <p
-                    className="font-display italic text-lg leading-relaxed"
+                    className="font-display italic text-xl leading-relaxed"
                     style={{ color: "var(--muted)" }}
                   >
                     &ldquo;{r}&rdquo;
@@ -171,7 +181,7 @@ export default async function TopicPage({ params }: Props) {
               Videos & Teachings
             </h3>
             <p
-              className="font-display italic text-base"
+              className="font-display italic text-lg"
               style={{ color: "var(--muted)" }}
             >
               In-depth teachings and reflections on this topic are being prepared
