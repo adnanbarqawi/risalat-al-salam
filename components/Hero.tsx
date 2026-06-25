@@ -83,9 +83,12 @@ export default function Hero() {
         {/* Bismillah */}
         <div className="animate-fade-in delay-100 flex flex-col items-center gap-2">
           <p className="font-arabic text-2xl md:text-3xl" style={{ color: "var(--gold-light)" }}>
-            بِسْمِ ٱللّٰهِ ٱلرَّحْمٰنِ ٱلرَّحِيمِ
+            بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
           </p>
-          <p className="font-display italic text-sm md:text-base" style={{ color: "rgba(232,221,199,0.65)" }}>
+          <p className="transliteration text-sm md:text-base" style={{ color: "rgba(200,164,93,0.8)" }}>
+            Bismillāh ar-Raḥmān ar-Raḥīm
+          </p>
+          <p className="font-display italic text-base" style={{ color: "rgba(232,221,199,0.75)" }}>
             In the name of God, the Most Compassionate, the Most Merciful.
           </p>
         </div>
@@ -93,10 +96,13 @@ export default function Hero() {
         <div className="divider-gold animate-fade-in delay-200" />
 
         {/* Title */}
-        <div className="animate-fade-up delay-300 flex flex-col items-center gap-3">
+        <div className="animate-fade-up delay-300 flex flex-col items-center gap-2">
           <h1 className="font-arabic text-5xl md:text-7xl" style={{ color: "var(--ivory)" }}>
             رِسَالَةُ السَّلَامِ
           </h1>
+          <p className="transliteration text-base md:text-lg" style={{ color: "rgba(200,164,93,0.85)" }}>
+            Risālat as-Salām
+          </p>
           <p
             className="font-display text-xl md:text-2xl tracking-[0.18em] uppercase"
             style={{ color: "var(--gold)", letterSpacing: "0.2em" }}
@@ -110,9 +116,12 @@ export default function Hero() {
         {/* Greeting */}
         <div className="animate-fade-up delay-500 flex flex-col items-center gap-2">
           <p className="font-arabic text-xl md:text-2xl" style={{ color: "rgba(232,221,199,0.9)" }}>
-            السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ
+            السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ ٱللَّٰهِ وَبَرَكَاتُهُ
           </p>
-          <p className="font-display italic text-base md:text-lg" style={{ color: "rgba(232,221,199,0.65)" }}>
+          <p className="transliteration text-sm md:text-base" style={{ color: "rgba(200,164,93,0.8)" }}>
+            As-salāmu ʿalaykum wa raḥmatullāhi wa barakātuh
+          </p>
+          <p className="font-display italic text-base md:text-lg" style={{ color: "rgba(232,221,199,0.75)" }}>
             May the Peace and Mercy and Blessings of God be upon you.
           </p>
         </div>
@@ -120,7 +129,7 @@ export default function Hero() {
         {/* Intro text */}
         <div
           className="animate-fade-up delay-700 max-w-xl mx-auto font-display text-base md:text-lg leading-relaxed"
-          style={{ color: "rgba(232,221,199,0.75)" }}
+          style={{ color: "rgba(232,221,199,0.82)" }}
         >
           <p className="mb-3">Welcome to The Message of Peace.</p>
           <p className="mb-3">This message is from my heart to yours.</p>

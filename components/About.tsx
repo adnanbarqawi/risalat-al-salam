@@ -1,3 +1,9 @@
+const arabicInline: React.CSSProperties = {
+  fontFamily: "Amiri, 'Traditional Arabic', serif",
+  fontSize: "1.15em",
+  lineHeight: "1.4",
+};
+
 export default function About() {
   return (
     <section
@@ -51,28 +57,46 @@ export default function About() {
             style={{ color: "var(--muted)" }}
           >
             <p>
-              I believe that we each have the ability to connect directly,
-              personally, and intimately with God.
+              My name is{" "}
+              <span style={arabicInline}>عَدْنَان</span>. My mother was born in{" "}
+              <span style={arabicInline}>غَزَّة</span>, and my father was born in{" "}
+              <span style={arabicInline}>طُولْ كَرَم</span>.
             </p>
+
             <p>
-              Each of our paths is as unique as our fingerprints.
+              My greatest passion is seeking{" "}
+              <span style={arabicInline}>ٱللَّٰه</span>. I love God with all
+              my heart.
             </p>
+
             <p>
-              I am passionate about sharing insights and holding space for you
-              as you continue on your own path.
+              Throughout my life, I have been deeply committed to answering two
+              questions:
+            </p>
+
+            <ul className="list-none flex flex-col gap-2 pl-2">
+              <li className="flex items-start gap-3">
+                <span style={{ color: "var(--gold)", marginTop: "0.25em", flexShrink: 0 }}>✦</span>
+                <span>How can I become the best version of myself?</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span style={{ color: "var(--gold)", marginTop: "0.25em", flexShrink: 0 }}>✦</span>
+                <span>How can I fulfill the purpose for which I was created?</span>
+              </li>
+            </ul>
+
+            <p>
+              That lifelong journey of seeking and reflection is what inspired
+              me to create and share this message with you.
+            </p>
+
+            <p>
+              If you are searching for your purpose, I would be honored to help
+              guide you. Together, we can cultivate a personal, intimate, and
+              direct relationship with God — rooted in sincerity, reflection,
+              and love.
             </p>
           </div>
-
-          <blockquote
-            className="pl-5 py-2 font-display italic text-base md:text-lg"
-            style={{
-              borderLeft: "3px solid var(--gold)",
-              color: "var(--green)",
-            }}
-          >
-            &ldquo;When we are actively fulfilling our destiny, we experience
-            fulfillment.&rdquo;
-          </blockquote>
         </div>
       </div>
     </section>
