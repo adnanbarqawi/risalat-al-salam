@@ -16,9 +16,9 @@ const topics = [
     slug: "meaning-of-forgiveness",
     arabic: "التَّسَامُح",
     transliteration: "At-Tasāmuḥ",
-    english: "Tolerance & Graciousness",
+    english: "Forgiveness",
     excerpt:
-      "At-Tasāmuḥ is the generous spirit of tolerance, mercy, and gracious understanding — the sacred path to reconciliation and peaceful coexistence.",
+      "Forgiveness is one of the most courageous acts of the human spirit — the choice to release resentment, restore peace within, and open the heart to healing and renewal.",
     icon: "✦",
   },
   {
@@ -105,7 +105,7 @@ export default function Topics() {
               {/* Transliteration */}
               <p
                 className="transliteration text-sm mb-2"
-                style={{ color: "var(--gold)", opacity: 0.9 }}
+                style={{ color: "var(--green)", opacity: 0.72 }}
               >
                 {topic.transliteration}
               </p>

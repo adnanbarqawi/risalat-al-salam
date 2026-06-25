@@ -32,15 +32,15 @@ const topicData: Record<
   "meaning-of-forgiveness": {
     arabic: "التَّسَامُح",
     transliteration: "At-Tasāmuḥ",
-    english: "The Meaning of At-Tasāmuḥ",
+    english: "Forgiveness",
     subtitle:
-      "At-Tasāmuḥ — the generous spirit of tolerance, mercy, and gracious understanding — is how love expresses itself in community, healing divisions and opening the way to reconciliation and peaceful coexistence.",
+      "Forgiveness is one of the most courageous acts of the human spirit — the choice to release resentment, restore peace within, and open the heart to healing and renewal.",
     intro:
-      "The Arabic word 'التَّسَامُح' (At-Tasāmuḥ) flows from a root meaning generosity of spirit — the willingness to extend grace, forbearance, and understanding to others as God extends it to us. In the Islamic tradition, mercy and tolerance are among the most beloved of all virtues. At-Tasāmuḥ is not weakness or indifference; it is an act of profound inner strength rooted in the recognition that all souls are created by the same God. It encompasses tolerance for difference, gracious understanding across divides, the courage to seek reconciliation, and the commitment to peaceful coexistence. This section is a growing sanctuary of teachings and reflections on this transformative virtue.",
+      "The Arabic التَّسَامُح (At-Tasāmuḥ) evokes a spirit of generous release — the expansive willingness to let go of what no longer serves the soul and extend grace to others and to oneself. True forgiveness is not a sign of weakness; it is an act of profound inner strength. It does not require forgetting what happened, nor does it mean accepting harm. It means choosing freedom over resentment, peace over bitterness, and love over fear. When we forgive, we reclaim our own wholeness. This section is a growing sanctuary of teachings and reflections on this transformative practice.",
     reflections: [
-      "True tolerance springs from the recognition that every soul bears the light of God — to honor another is to honor the One who created them.",
-      "Mercy shown to others is mercy that finds its way back to us; the gracious heart becomes a vessel through which the Divine pours its blessings.",
-      "Reconciliation is not the erasure of difference — it is the discovery of our shared humanity, the thread of love that God has woven into every heart.",
+      "Forgiveness is a gift you give to yourself — it releases the weight that was never truly yours to carry.",
+      "When we let go of resentment, we create space for something greater: peace, clarity, and the freedom to grow.",
+      "The most enduring acts of healing in human history have begun not with retaliation, but with the quiet, courageous decision to forgive.",
     ],
   },
   "meaning-of-love": {
@@ -116,8 +116,8 @@ export default async function TopicPage({ params }: Props) {
             </p>
             <div className="divider-gold" />
             <p
-              className="font-display italic text-base md:text-lg max-w-xl"
-              style={{ color: "rgba(232,221,199,0.82)" }}
+              className="font-display italic text-lg md:text-xl max-w-xl"
+              style={{ color: "rgba(232,221,199,0.88)" }}
             >
               {topic.subtitle}
             </p>
@@ -127,7 +127,7 @@ export default async function TopicPage({ params }: Props) {
         {/* Intro */}
         <section className="py-16 px-6 max-w-3xl mx-auto">
           <p
-            className="font-display text-lg md:text-xl leading-loose text-center"
+            className="font-display text-xl md:text-2xl leading-loose text-center"
             style={{ color: "var(--text)" }}
           >
             {topic.intro}
@@ -154,7 +154,7 @@ export default async function TopicPage({ params }: Props) {
                   style={{ borderLeft: "3px solid var(--gold)" }}
                 >
                   <p
-                    className="font-display italic text-lg leading-relaxed"
+                    className="font-display italic text-xl leading-relaxed"
                     style={{ color: "var(--muted)" }}
                   >
                     &ldquo;{r}&rdquo;
@@ -181,7 +181,7 @@ export default async function TopicPage({ params }: Props) {
               Videos & Teachings
             </h3>
             <p
-              className="font-display italic text-base"
+              className="font-display italic text-lg"
               style={{ color: "var(--muted)" }}
             >
               In-depth teachings and reflections on this topic are being prepared

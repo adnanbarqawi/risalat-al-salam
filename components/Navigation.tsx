@@ -25,9 +25,9 @@ export default function Navigation() {
   return (
     <header
       style={{
-        backgroundColor: scrolled ? "rgba(250,248,242,0.95)" : "rgba(15,40,28,0.45)",
-        backdropFilter: scrolled ? "blur(12px)" : "blur(4px)",
-        borderBottom: scrolled ? "1px solid rgba(200,164,93,0.2)" : "1px solid rgba(200,164,93,0.12)",
+        backgroundColor: scrolled ? "rgba(250,248,242,0.95)" : "rgba(4,14,9,0.78)",
+        backdropFilter: scrolled ? "blur(12px)" : "blur(6px)",
+        borderBottom: scrolled ? "1px solid rgba(200,164,93,0.2)" : "1px solid rgba(200,164,93,0.15)",
         transition: "all 0.4s ease",
       }}
       className="fixed top-0 left-0 right-0 z-50"
@@ -38,9 +38,10 @@ export default function Navigation() {
           <span
             className="font-arabic text-lg"
             style={{
-              color: scrolled ? "var(--green)" : "var(--gold-light)",
+              color: scrolled ? "var(--green)" : "var(--ivory)",
               lineHeight: 1.3,
               transition: "color 0.4s ease",
+              textShadow: scrolled ? "none" : "0 1px 6px rgba(0,0,0,0.5)",
             }}
           >
             رِسَالَةُ السَّلَامِ

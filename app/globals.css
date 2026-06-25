@@ -20,15 +20,15 @@ body {
   color: var(--text);
   font-family: 'Cormorant Garamond', Georgia, serif;
   -webkit-font-smoothing: antialiased;
-  font-size: 1.0625rem;
-  line-height: 1.8;
+  font-size: 1.125rem;
+  line-height: 1.85;
 }
 
 .font-arabic {
   font-family: 'Amiri', 'Traditional Arabic', serif;
   direction: rtl;
   text-align: center;
-  line-height: 2.2;
+  line-height: 2.3;
 }
 
 .font-display { font-family: 'Cormorant Garamond', Georgia, serif; }
@@ -38,10 +38,6 @@ body {
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-style: italic;
   letter-spacing: 0.04em;
-}
-
-@media (max-width: 640px) {
-  body { font-size: 1.0625rem; line-height: 1.85; }
 }
 
 .divider-gold {

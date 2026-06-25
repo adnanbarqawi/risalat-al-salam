@@ -4,6 +4,15 @@ const arabicInline: React.CSSProperties = {
   lineHeight: "1.4",
 };
 
+const translit: React.CSSProperties = {
+  fontFamily: "Cormorant Garamond, Georgia, serif",
+  fontStyle: "italic",
+  fontSize: "0.9em",
+  color: "var(--green)",
+  opacity: 0.72,
+  letterSpacing: "0.03em",
+};
+
 export default function About() {
   return (
     <section
@@ -53,20 +62,25 @@ export default function About() {
           <div className="divider-gold" style={{ margin: "0" }} />
 
           <div
-            className="font-display text-base md:text-lg leading-loose flex flex-col gap-4"
+            className="font-display text-lg md:text-xl leading-loose flex flex-col gap-5"
             style={{ color: "var(--muted)" }}
           >
             <p>
               My name is{" "}
-              <span style={arabicInline}>عَدْنَان</span>. My mother was born in{" "}
-              <span style={arabicInline}>غَزَّة</span>, and my father was born in{" "}
-              <span style={arabicInline}>طُولْ كَرَم</span>.
+              <span style={arabicInline}>عَدْنَان</span>{" "}
+              <span style={translit}>(Adnān)</span>. My mother was born in{" "}
+              <span style={arabicInline}>غَزَّة</span>{" "}
+              <span style={translit}>(Ghazzah / Gaza)</span>, and my father was
+              born in{" "}
+              <span style={arabicInline}>طُولْ كَرَم</span>{" "}
+              <span style={translit}>(Ṭūl Karm / Tulkarm)</span>.
             </p>
 
             <p>
               My greatest passion is seeking{" "}
-              <span style={arabicInline}>ٱللَّٰه</span>. I love God with all
-              my heart.
+              <span style={arabicInline}>ٱللَّٰه</span>{" "}
+              <span style={translit}>(Allāh)</span>. I love God with all my
+              heart.
             </p>
 
             <p>
@@ -74,13 +88,13 @@ export default function About() {
               questions:
             </p>
 
-            <ul className="list-none flex flex-col gap-2 pl-2">
+            <ul className="list-none flex flex-col gap-3 pl-2">
               <li className="flex items-start gap-3">
-                <span style={{ color: "var(--gold)", marginTop: "0.25em", flexShrink: 0 }}>✦</span>
+                <span style={{ color: "var(--gold)", marginTop: "0.3em", flexShrink: 0 }}>✦</span>
                 <span>How can I become the best version of myself?</span>
               </li>
               <li className="flex items-start gap-3">
-                <span style={{ color: "var(--gold)", marginTop: "0.25em", flexShrink: 0 }}>✦</span>
+                <span style={{ color: "var(--gold)", marginTop: "0.3em", flexShrink: 0 }}>✦</span>
                 <span>How can I fulfill the purpose for which I was created?</span>
               </li>
             </ul>
