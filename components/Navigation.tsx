@@ -25,9 +25,9 @@ export default function Navigation() {
   return (
     <header
       style={{
-        backgroundColor: scrolled ? "rgba(250,248,242,0.95)" : "transparent",
-        backdropFilter: scrolled ? "blur(12px)" : "none",
-        borderBottom: scrolled ? "1px solid rgba(200,164,93,0.2)" : "none",
+        backgroundColor: scrolled ? "rgba(250,248,242,0.95)" : "rgba(15,40,28,0.45)",
+        backdropFilter: scrolled ? "blur(12px)" : "blur(4px)",
+        borderBottom: scrolled ? "1px solid rgba(200,164,93,0.2)" : "1px solid rgba(200,164,93,0.12)",
         transition: "all 0.4s ease",
       }}
       className="fixed top-0 left-0 right-0 z-50"
@@ -37,13 +37,20 @@ export default function Navigation() {
         <Link href="/" className="flex flex-col items-start leading-tight">
           <span
             className="font-arabic text-lg"
-            style={{ color: "var(--green)", lineHeight: 1.3 }}
+            style={{
+              color: scrolled ? "var(--green)" : "var(--gold-light)",
+              lineHeight: 1.3,
+              transition: "color 0.4s ease",
+            }}
           >
-            رسالة السلام
+            رِسَالَةُ السَّلَامِ
           </span>
           <span
             className="font-display text-xs tracking-[0.2em] uppercase"
-            style={{ color: "var(--gold)", letterSpacing: "0.18em" }}
+            style={{
+              color: "var(--gold)",
+              letterSpacing: "0.18em",
+            }}
           >
             The Message of Peace
           </span>
@@ -56,12 +63,12 @@ export default function Navigation() {
               key={l.href}
               href={l.href}
               className="font-ui text-sm tracking-wide transition-colors duration-200"
-              style={{ color: "var(--muted)" }}
+              style={{ color: scrolled ? "var(--muted)" : "rgba(232,221,199,0.85)" }}
               onMouseEnter={(e) =>
                 (e.currentTarget.style.color = "var(--gold)")
               }
               onMouseLeave={(e) =>
-                (e.currentTarget.style.color = "var(--muted)")
+                (e.currentTarget.style.color = scrolled ? "var(--muted)" : "rgba(232,221,199,0.85)")
               }
             >
               {l.label}
@@ -71,16 +78,18 @@ export default function Navigation() {
             href="/#connect"
             className="font-ui text-sm px-5 py-2 rounded-full transition-all duration-200"
             style={{
-              background: "var(--green)",
-              color: "var(--ivory)",
+              background: scrolled ? "var(--green)" : "rgba(200,164,93,0.85)",
+              color: scrolled ? "var(--ivory)" : "var(--green)",
               letterSpacing: "0.05em",
             }}
-            onMouseEnter={(e) =>
-              (e.currentTarget.style.background = "var(--green-light)")
-            }
-            onMouseLeave={(e) =>
-              (e.currentTarget.style.background = "var(--green)")
-            }
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = "var(--gold-light)";
+              e.currentTarget.style.color = "var(--green)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = scrolled ? "var(--green)" : "rgba(200,164,93,0.85)";
+              e.currentTarget.style.color = scrolled ? "var(--ivory)" : "var(--green)";
+            }}
           >
             Book a Session
           </Link>
@@ -91,7 +100,10 @@ export default function Navigation() {
           className="md:hidden p-2"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
-          style={{ color: "var(--green)" }}
+          style={{
+            color: scrolled ? "var(--green)" : "var(--ivory)",
+            transition: "color 0.4s ease",
+          }}
         >
           {open ? <X size={22} /> : <Menu size={22} />}
         </button>

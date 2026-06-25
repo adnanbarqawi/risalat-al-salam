@@ -13,11 +13,11 @@ export default function Footer() {
 
         <div className="flex flex-col items-center gap-1">
           <span className="font-arabic text-2xl" style={{ color: "var(--gold-light)" }}>
-            رسالة السلام
+            رِسَالَةُ السَّلَامِ
           </span>
           <span
             className="font-display text-xs tracking-[0.22em] uppercase"
-            style={{ color: "rgba(232,221,199,0.6)", letterSpacing: "0.2em" }}
+            style={{ color: "rgba(232,221,199,0.7)", letterSpacing: "0.2em" }}
           >
             The Message of Peace
           </span>
@@ -48,12 +48,20 @@ export default function Footer() {
           ))}
         </nav>
 
-        <p
-          className="font-arabic text-base mt-2"
-          style={{ color: "rgba(232,221,199,0.5)", fontSize: "1rem" }}
-        >
-          السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ
-        </p>
+        <div className="flex flex-col items-center gap-1 mt-2">
+          <p
+            className="font-arabic text-base"
+            style={{ color: "rgba(232,221,199,0.8)" }}
+          >
+            السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ ٱللَّٰهِ وَبَرَكَاتُهُ
+          </p>
+          <p
+            className="transliteration text-xs"
+            style={{ color: "rgba(200,164,93,0.65)" }}
+          >
+            As-salāmu ʿalaykum wa raḥmatullāhi wa barakātuh
+          </p>
+        </div>
 
         <p
           className="font-ui text-xs mt-2"

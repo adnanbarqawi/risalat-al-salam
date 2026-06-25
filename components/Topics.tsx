@@ -5,24 +5,27 @@ import Link from "next/link";
 const topics = [
   {
     slug: "meaning-of-peace",
-    arabic: "مَعْنَى السَّلَامِ",
-    english: "Meaning of Peace",
+    arabic: "السَّلَام",
+    transliteration: "As-Salām",
+    english: "Peace",
     excerpt:
       "Peace is not merely the absence of conflict — it is a profound state of wholeness, harmony, and alignment with the Divine.",
     icon: "☽",
   },
   {
     slug: "meaning-of-forgiveness",
-    arabic: "مَعْنَى الْمَغْفِرَةِ",
-    english: "Meaning of Forgiveness",
+    arabic: "التَّسَامُح",
+    transliteration: "At-Tasāmuḥ",
+    english: "Tolerance & Graciousness",
     excerpt:
-      "Forgiveness is one of the greatest acts of courage. It liberates the soul and opens the heart to healing and renewal.",
+      "At-Tasāmuḥ is the generous spirit of tolerance, mercy, and gracious understanding — the sacred path to reconciliation and peaceful coexistence.",
     icon: "✦",
   },
   {
     slug: "meaning-of-love",
-    arabic: "مَعْنَى الْمَحَبَّةِ",
-    english: "Meaning of Love",
+    arabic: "الْمَحَبَّة",
+    transliteration: "Al-Maḥabbah",
+    english: "Love",
     excerpt:
       "Love is the original language of the soul — the force that connects all of creation back to its source.",
     icon: "◇",
@@ -93,10 +96,18 @@ export default function Topics() {
 
               {/* Arabic title */}
               <p
-                className="font-arabic text-2xl mb-1"
+                className="font-arabic text-3xl mb-1"
                 style={{ color: "var(--green)" }}
               >
                 {topic.arabic}
+              </p>
+
+              {/* Transliteration */}
+              <p
+                className="transliteration text-sm mb-2"
+                style={{ color: "var(--gold)", opacity: 0.9 }}
+              >
+                {topic.transliteration}
               </p>
 
               {/* English title */}
@@ -111,7 +122,7 @@ export default function Topics() {
 
               {/* Excerpt */}
               <p
-                className="font-display italic text-sm leading-relaxed"
+                className="font-display italic text-base leading-relaxed"
                 style={{ color: "var(--muted)" }}
               >
                 {topic.excerpt}

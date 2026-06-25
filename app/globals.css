@@ -8,7 +8,7 @@
   --gold:        #C8A45D;
   --gold-light:  #DFC07A;
   --text:        #2C2C2C;
-  --muted:       #6B6B5C;
+  --muted:       #4A4A3C;
 }
 
 * { box-sizing: border-box; }
@@ -20,6 +20,8 @@ body {
   color: var(--text);
   font-family: 'Cormorant Garamond', Georgia, serif;
   -webkit-font-smoothing: antialiased;
+  font-size: 1.0625rem;
+  line-height: 1.8;
 }
 
 .font-arabic {
@@ -31,6 +33,16 @@ body {
 
 .font-display { font-family: 'Cormorant Garamond', Georgia, serif; }
 .font-ui      { font-family: 'Inter', sans-serif; }
+
+.transliteration {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 640px) {
+  body { font-size: 1.0625rem; line-height: 1.85; }
+}
 
 .divider-gold {
   width: 60px;
