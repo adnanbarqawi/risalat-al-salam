@@ -146,8 +146,8 @@ export default function Hero() {
           </p>
         </div>
 
-        {/* CTAs */}
-        <div className="animate-fade-up delay-900 flex flex-col sm:flex-row items-center gap-4 mt-2">
+        {/* CTA */}
+        <div className="animate-fade-up delay-900 flex items-center gap-4 mt-2">
           <Link
             href="/#topics"
             className="font-ui px-8 py-3 rounded-full text-sm tracking-wide transition-all duration-300"
@@ -156,21 +156,6 @@ export default function Hero() {
             onMouseLeave={(e) => (e.currentTarget.style.background = "var(--gold)")}
           >
             Explore Topics
-          </Link>
-          <Link
-            href="/#connect"
-            className="font-ui px-8 py-3 rounded-full text-sm tracking-wide border transition-all duration-300"
-            style={{ borderColor: "rgba(200,164,93,0.5)", color: "var(--gold)" }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.borderColor = "var(--gold)";
-              e.currentTarget.style.background = "rgba(200,164,93,0.1)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.borderColor = "rgba(200,164,93,0.5)";
-              e.currentTarget.style.background = "transparent";
-            }}
-          >
-            Book a Session
           </Link>
         </div>
       </div>

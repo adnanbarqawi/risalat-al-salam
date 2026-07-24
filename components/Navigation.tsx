@@ -7,8 +7,6 @@ import { Menu, X } from "lucide-react";
 const links = [
   { href: "/#topics",   label: "Topics" },
   { href: "/#videos",   label: "Videos" },
-  { href: "/#about",    label: "About" },
-  { href: "/#connect",  label: "Connect" },
   { href: "/#contact",  label: "Contact" },
 ];
 
@@ -75,25 +73,6 @@ export default function Navigation() {
               {l.label}
             </Link>
           ))}
-          <Link
-            href="/#connect"
-            className="font-ui text-sm px-5 py-2 rounded-full transition-all duration-200"
-            style={{
-              background: scrolled ? "var(--green)" : "rgba(200,164,93,0.85)",
-              color: scrolled ? "var(--ivory)" : "var(--green)",
-              letterSpacing: "0.05em",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.background = "var(--gold-light)";
-              e.currentTarget.style.color = "var(--green)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.background = scrolled ? "var(--green)" : "rgba(200,164,93,0.85)";
-              e.currentTarget.style.color = scrolled ? "var(--ivory)" : "var(--green)";
-            }}
-          >
-            Book a Session
-          </Link>
         </nav>
 
         {/* Mobile toggle */}
@@ -130,14 +109,6 @@ export default function Navigation() {
               {l.label}
             </Link>
           ))}
-          <Link
-            href="/#connect"
-            className="font-ui text-sm px-5 py-2.5 rounded-full text-center mt-2"
-            style={{ background: "var(--green)", color: "var(--ivory)" }}
-            onClick={() => setOpen(false)}
-          >
-            Book a Session
-          </Link>
         </div>
       )}
     </header>
