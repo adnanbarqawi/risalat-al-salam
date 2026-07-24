@@ -27,8 +27,6 @@ export default function Footer() {
           {[
             { href: "/#topics",  label: "Topics"  },
             { href: "/#videos",  label: "Videos"  },
-            { href: "/#about",   label: "About"   },
-            { href: "/#connect", label: "Connect" },
             { href: "/#contact", label: "Contact" },
           ].map((l) => (
             <Link

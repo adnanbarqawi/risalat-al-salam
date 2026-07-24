@@ -188,11 +188,11 @@ export default async function TopicPage({ params }: Props) {
               and will be shared here soon.
             </p>
             <Link
-              href="/#connect"
+              href="/#contact"
               className="font-ui text-sm px-6 py-2.5 rounded-full mt-2"
               style={{ background: "var(--green)", color: "var(--ivory)" }}
             >
-              Connect for Personal Guidance
+              Get in Touch
             </Link>
           </div>
         </section>
