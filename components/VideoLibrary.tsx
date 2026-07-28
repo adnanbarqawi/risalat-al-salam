@@ -60,8 +60,8 @@ export default function VideoLibrary({ videos }: { videos: Video[] }) {
           </h2>
           <div className="divider-gold" />
           <p
-            className="font-display italic text-lg max-w-md"
-            style={{ color: "rgba(232,221,199,0.65)" }}
+            className="font-body text-xl max-w-md"
+            style={{ color: "rgba(232,221,199,0.82)" }}
           >
             Teachings, reflections, and insights — available whenever you need them.
           </p>
@@ -126,22 +126,22 @@ export default function VideoLibrary({ videos }: { videos: Video[] }) {
                   In Progress
                 </span>
                 <p
-                  className="font-display italic text-2xl"
-                  style={{ color: "rgba(232,221,199,0.75)" }}
+                  className="font-body text-2xl"
+                  style={{ color: "rgba(232,221,199,0.85)" }}
                 >
                   Videos are on their way.
                 </p>
                 <p
                   className="font-ui text-sm max-w-xs"
-                  style={{ color: "rgba(232,221,199,0.4)" }}
+                  style={{ color: "rgba(232,221,199,0.75)" }}
                 >
                   Stay tuned — teachings and reflections will be uploaded here soon.
                 </p>
               </>
             ) : (
               <p
-                className="font-display italic text-xl"
-                style={{ color: "rgba(232,221,199,0.4)" }}
+                className="font-body text-xl"
+                style={{ color: "rgba(232,221,199,0.82)" }}
               >
                 No videos match your search.
               </p>
@@ -257,7 +257,7 @@ function VideoCard({
         </h3>
         <p
           className="font-ui text-sm leading-relaxed line-clamp-2"
-          style={{ color: "rgba(232,221,199,0.55)" }}
+          style={{ color: "rgba(232,221,199,0.72)" }}
         >
           {video.description_en}
         </p>

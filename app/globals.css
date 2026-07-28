@@ -8,7 +8,7 @@
   --gold:        #C8A45D;
   --gold-light:  #DFC07A;
   --text:        #2C2C2C;
-  --muted:       #4A4A3C;
+  --muted:       #3D3D30;
 }
 
 * { box-sizing: border-box; }
@@ -33,6 +33,7 @@ body {
 
 .font-display { font-family: 'Cormorant Garamond', Georgia, serif; }
 .font-ui      { font-family: 'Inter', sans-serif; }
+.font-body    { font-family: 'Lora', Georgia, serif; font-style: normal; }
 
 .transliteration {
   font-family: 'Cormorant Garamond', Georgia, serif;

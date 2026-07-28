@@ -127,7 +127,7 @@ export default async function TopicPage({ params }: Props) {
         {/* Intro */}
         <section className="py-16 px-6 max-w-3xl mx-auto">
           <p
-            className="font-display text-2xl md:text-3xl leading-loose text-center"
+            className="font-body text-2xl md:text-3xl leading-loose text-center"
             style={{ color: "var(--text)" }}
           >
             {topic.intro}
@@ -154,7 +154,7 @@ export default async function TopicPage({ params }: Props) {
                   style={{ borderLeft: "3px solid var(--gold)" }}
                 >
                   <p
-                    className="font-display italic text-2xl leading-relaxed"
+                    className="font-body text-2xl leading-relaxed"
                     style={{ color: "var(--muted)" }}
                   >
                     &ldquo;{r}&rdquo;
@@ -181,7 +181,7 @@ export default async function TopicPage({ params }: Props) {
               Videos & Teachings
             </h3>
             <p
-              className="font-display italic text-xl"
+              className="font-body text-xl"
               style={{ color: "var(--muted)" }}
             >
               In-depth teachings and reflections on this topic are being prepared

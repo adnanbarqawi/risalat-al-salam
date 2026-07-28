@@ -88,7 +88,7 @@ export default function Hero() {
           <p className="transliteration text-sm md:text-base" style={{ color: "rgba(200,164,93,0.8)" }}>
             Bismillāh ar-Raḥmān ar-Raḥīm
           </p>
-          <p className="font-display italic text-lg md:text-xl" style={{ color: "rgba(232,221,199,0.82)" }}>
+          <p className="font-body text-lg md:text-xl" style={{ color: "rgba(232,221,199,0.9)" }}>
             In the name of God, the Most Compassionate, the Most Merciful
           </p>
         </div>
@@ -121,15 +121,15 @@ export default function Hero() {
           <p className="transliteration text-sm md:text-base" style={{ color: "rgba(200,164,93,0.8)" }}>
             As-salāmu ʿalaykum wa raḥmatullāhi wa barakātuh
           </p>
-          <p className="font-display italic text-lg md:text-xl" style={{ color: "rgba(232,221,199,0.82)" }}>
+          <p className="font-body text-lg md:text-xl" style={{ color: "rgba(232,221,199,0.9)" }}>
             May the Peace and Mercy and Blessings of God be upon you.
           </p>
         </div>
 
         {/* Intro text */}
         <div
-          className="animate-fade-up delay-700 max-w-xl mx-auto font-display text-xl md:text-2xl leading-relaxed"
-          style={{ color: "rgba(232,221,199,0.88)" }}
+          className="animate-fade-up delay-700 max-w-xl mx-auto font-body text-xl md:text-2xl leading-relaxed"
+          style={{ color: "rgba(232,221,199,0.92)" }}
         >
           <p className="mb-3">Welcome to The Message of Peace.</p>
           <p className="mb-3">This message is from my heart to yours.</p>

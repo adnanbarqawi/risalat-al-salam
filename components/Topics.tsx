@@ -53,7 +53,7 @@ export default function Topics() {
           </h2>
           <div className="divider-gold" />
           <p
-            className="font-display italic text-lg md:text-xl max-w-xl"
+            className="font-body text-lg md:text-xl max-w-xl"
             style={{ color: "var(--muted)" }}
           >
             Three pillars of the spiritual journey, offered as a resource for
@@ -122,7 +122,7 @@ export default function Topics() {
 
               {/* Excerpt */}
               <p
-                className="font-display italic text-lg leading-relaxed"
+                className="font-body text-lg leading-relaxed"
                 style={{ color: "var(--muted)" }}
               >
                 {topic.excerpt}
