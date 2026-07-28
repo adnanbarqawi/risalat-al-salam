@@ -116,7 +116,7 @@ export default async function TopicPage({ params }: Props) {
             </p>
             <div className="divider-gold" />
             <p
-              className="font-display italic text-lg md:text-xl max-w-xl"
+              className="font-display italic text-xl md:text-2xl max-w-xl"
               style={{ color: "rgba(232,221,199,0.88)" }}
             >
               {topic.subtitle}
@@ -127,7 +127,7 @@ export default async function TopicPage({ params }: Props) {
         {/* Intro */}
         <section className="py-16 px-6 max-w-3xl mx-auto">
           <p
-            className="font-display text-xl md:text-2xl leading-loose text-center"
+            className="font-body text-2xl md:text-3xl leading-loose text-center"
             style={{ color: "var(--text)" }}
           >
             {topic.intro}
@@ -154,7 +154,7 @@ export default async function TopicPage({ params }: Props) {
                   style={{ borderLeft: "3px solid var(--gold)" }}
                 >
                   <p
-                    className="font-display italic text-xl leading-relaxed"
+                    className="font-body text-2xl leading-relaxed"
                     style={{ color: "var(--muted)" }}
                   >
                     &ldquo;{r}&rdquo;
@@ -181,19 +181,12 @@ export default async function TopicPage({ params }: Props) {
               Videos & Teachings
             </h3>
             <p
-              className="font-display italic text-lg"
+              className="font-body text-xl"
               style={{ color: "var(--muted)" }}
             >
               In-depth teachings and reflections on this topic are being prepared
               and will be shared here soon.
             </p>
-            <Link
-              href="/#contact"
-              className="font-ui text-sm px-6 py-2.5 rounded-full mt-2"
-              style={{ background: "var(--green)", color: "var(--ivory)" }}
-            >
-              Get in Touch
-            </Link>
           </div>
         </section>
       </main>

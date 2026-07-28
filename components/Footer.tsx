@@ -27,18 +27,17 @@ export default function Footer() {
           {[
             { href: "/#topics",  label: "Topics"  },
             { href: "/#videos",  label: "Videos"  },
-            { href: "/#contact", label: "Contact" },
           ].map((l) => (
             <Link
               key={l.href}
               href={l.href}
               className="font-ui text-xs tracking-wide transition-colors duration-200"
-              style={{ color: "rgba(232,221,199,0.7)" }}
+              style={{ color: "rgba(232,221,199,0.8)" }}
               onMouseEnter={(e) =>
                 (e.currentTarget.style.color = "var(--gold-light)")
               }
               onMouseLeave={(e) =>
-                (e.currentTarget.style.color = "rgba(232,221,199,0.7)")
+                (e.currentTarget.style.color = "rgba(232,221,199,0.8)")
               }
             >
               {l.label}
@@ -63,7 +62,7 @@ export default function Footer() {
 
         <p
           className="font-ui text-xs mt-2"
-          style={{ color: "rgba(232,221,199,0.4)" }}
+          style={{ color: "rgba(232,221,199,0.75)" }}
         >
           © {new Date().getFullYear()} The Message of Peace. All rights reserved.
         </p>
