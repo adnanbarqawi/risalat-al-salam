@@ -20,7 +20,7 @@ body {
   color: var(--text);
   font-family: 'Cormorant Garamond', Georgia, serif;
   -webkit-font-smoothing: antialiased;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   line-height: 1.85;
 }
 

@@ -7,7 +7,6 @@ import { Menu, X } from "lucide-react";
 const links = [
   { href: "/#topics",   label: "Topics" },
   { href: "/#videos",   label: "Videos" },
-  { href: "/#contact",  label: "Contact" },
 ];
 
 export default function Navigation() {

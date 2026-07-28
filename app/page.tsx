@@ -2,7 +2,6 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Topics from "@/components/Topics";
 import VideoLibrary from "@/components/VideoLibrary";
-import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 export default function HomePage() {
@@ -13,7 +12,6 @@ export default function HomePage() {
         <Hero />
         <Topics />
         <VideoLibrary videos={[]} />
-        <Contact />
       </main>
       <Footer />
     </>

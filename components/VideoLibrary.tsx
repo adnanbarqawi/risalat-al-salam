@@ -60,7 +60,7 @@ export default function VideoLibrary({ videos }: { videos: Video[] }) {
           </h2>
           <div className="divider-gold" />
           <p
-            className="font-display italic text-base max-w-md"
+            className="font-display italic text-lg max-w-md"
             style={{ color: "rgba(232,221,199,0.65)" }}
           >
             Teachings, reflections, and insights — available whenever you need them.
@@ -126,7 +126,7 @@ export default function VideoLibrary({ videos }: { videos: Video[] }) {
                   In Progress
                 </span>
                 <p
-                  className="font-display italic text-xl"
+                  className="font-display italic text-2xl"
                   style={{ color: "rgba(232,221,199,0.75)" }}
                 >
                   Videos are on their way.
@@ -140,7 +140,7 @@ export default function VideoLibrary({ videos }: { videos: Video[] }) {
               </>
             ) : (
               <p
-                className="font-display italic text-lg"
+                className="font-display italic text-xl"
                 style={{ color: "rgba(232,221,199,0.4)" }}
               >
                 No videos match your search.
@@ -256,7 +256,7 @@ function VideoCard({
           {video.title_en}
         </h3>
         <p
-          className="font-ui text-xs leading-relaxed line-clamp-2"
+          className="font-ui text-sm leading-relaxed line-clamp-2"
           style={{ color: "rgba(232,221,199,0.55)" }}
         >
           {video.description_en}
